@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>KnowMoreJS, Talentica Chapter</h1>
+    <% 
+    let data = {
+        "meetups": [{
+                "title": "Mirco frondend",
+                "date": "26 Sep, 2020"
+            },
+            {
+                "title": "Explore VueJs",
+                "date": "23 Oct, 2020"
+            }
+        ]
+    };
+   
+    %>
+        <ul>
+            <% for(var i = 0 ; i < data.meetups.length ; i++) { 
+                var meetup  = data.meetups[i] ; 
+                var title = meetup.title ; 
+                var date = meetup.date ; %>
+                <li>
+                    <h3>Title :
+                        <%= title %>
+                    </h3>
+                    <h5>Date :
+                        <%= date %>
+                    </h5>
+                </li>
+                <% } %>
+        </ul>
+</body>
+
+</html>
